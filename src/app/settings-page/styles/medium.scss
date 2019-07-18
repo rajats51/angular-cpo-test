@@ -1,0 +1,84 @@
+@import "global_styles";
+
+.row1-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row2-container{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 157px;
+    justify-content: center;
+    align-items: center;
+}
+.welcome{
+    height: 41px;	
+    width: 478px;	
+    color: $color-blue;	
+    @include font-size(30);	
+    @include font-weight(medium);	
+    @include line-height(38);
+    margin: 30px auto;	
+}
+
+.step{
+    display: none;	
+}
+
+form{
+    & input{
+        width: 300px;			
+        letter-spacing: 0.88px;	
+    }
+}
+
+.instructions-container{
+    margin:20px auto;
+}
+
+.note{
+    height: 40px;	
+    width: 164px;	
+    opacity: 0.9;	
+    color: $color-black;
+    @include font-size(22);	
+    @include font-weight(medium);	
+    @include line-height(40);	
+    margin: 28px auto 8px;
+}
+.password-requirement{
+    height: 155px;
+    width: 441px;	
+    color: $color-black;
+    @include font-size(16);	
+    @include line-height(25);		
+}
+.task-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    .task-board {
+        display: block;
+        width: 100%;
+        .tasks {
+            width: 50%;
+            display: inline-block;
+        }
+    }
+}
+
+.page-content {
+    padding-bottom: 157px;
+    .form-container {
+        width: 574px;
+        .mat-form-field {
+            margin-bottom: 0;
+        }
+        .mat-form-field-appearance-legacy {
+            .mat-form-field-wrapper {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}

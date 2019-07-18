@@ -1,0 +1,57 @@
+<div id="master-container" class="master-container">
+  <app-post-header></app-post-header>
+  <app-sidenav-menu></app-sidenav-menu>
+  <div id="progress-container" class="progress-container">
+    <app-settings-banner [profile]="profile"></app-settings-banner>
+  </div>
+  <div id="canvas-container" class="canvas-container">
+    <div class="page-content">
+        <div id="editFormContainer" class="form-container">
+          <form [formGroup]="editProfileForm" id="editProfileForm" class="form_holder edit-profile-form">
+            <h3 class="form-title">User Details</h3>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="firstName" name="firstName" type="text" placeholder="First Name" formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="lastName" name="lastName" type="text" placeholder="Last Name" formControlName="lastName">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="address1" name="address1" type="text" placeholder="Address 1" formControlName="address1">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="address2" name="address2" type="text" placeholder="Address 2" formControlName="address2">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="city" name="city" type="text" placeholder="City" formControlName="city">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="state" name="state" type="text" placeholder="State" formControlName="state">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="zip" name="zip" type="text" placeholder="Zip" formControlName="zip">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="title" name="title" type="text" placeholder="Title" formControlName="title">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="company" name="company" type="text" placeholder="Company" formControlName="company">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="email" name="email" type="text" placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field class="form-label">
+                <input matInput class="form-input-text" id="cellPhone" name="cellPhone" type="text" placeholder="Cell Phone" formControlName="cellPhone">
+            </mat-form-field>
+          </form>
+        </div>
+        <div class="task-container" id="task-container">
+            <h3 class="form-title">User Details</h3>
+            <div class="task-board" id="task-board">
+                <app-cpo-task-card *ngFor="let task of tasks | slice:0:4; let i = index" [task]="task" [type]="'tasks'" [index]="i" class="tasks"
+                id="to_do_card_{{i}}"></app-cpo-task-card>
+            </div>
+        </div>
+    </div>
+    <app-post-footer></app-post-footer>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="task-container">
+    <div class="task-board task-board-lg" id="task-board">
+        <div class="column border">
+            <div class="column-header" id="todo-header">TO-DO <span class="task-count" id="todo-count">({{toDo.length}})</span></div>
+                <app-cpo-task-card *ngFor="let task of toDo | slice:0:4; let i = index" [task]="task" [index]="i" class="to-do" id="to_do_card_{{i}}"></app-cpo-task-card>
+                <mat-card *ngIf="toDo.length > 4" class="card-type more-cards-block">
+                    <span class="extra-cards-count">{{toDo.length}}+</span>
+                    <span class="title" id="title">View more to-do tasks</span>
+                </mat-card>
+        </div>
+        <div class="column">
+            <div class="column-header" id="progress-header">IN PROGRESS <span class="task-count" id="progress-count">({{inProgress.length}})</span></div>
+                <app-cpo-task-card *ngFor="let task of inProgress | slice: 0:4; let i = index" [index]="i" [task]="task" class="inprogress" id="inprogress_card_{{i}}"></app-cpo-task-card>
+                <mat-card *ngIf="inProgress.length > 4" class="card-type more-cards-block">
+                    <span class="extra-cards-count">{{inProgress.length}}+</span>
+                    <span class="title" id="title">View more to-do tasks</span>
+                </mat-card>
+        </div>
+        <div class="column">
+            <div class="column-header" id="completed-header"> COMPLETED <span class="task-count" id="completed-count">({{completed.length}})</span></div>
+                <app-cpo-task-card *ngFor="let task of completed | slice: 0:4; let i = index" [index]="i" [task]="task" class="completed" id="completed_card_{{i}}"></app-cpo-task-card>
+                <mat-card *ngIf="completed.length > 4" class="card-type more-cards-block">
+                    <span class="extra-cards-count">{{completed.length}}+</span>
+                    <span class="title" id="title">View more to-do tasks</span>
+                </mat-card>
+        </div>
+        <div class="column">
+            <div class="column-header" id="blocked-header"> BLOCKED <span class="task-count" id="blocked-count">({{blocked.length}})</span></div>
+                <app-cpo-task-card *ngFor="let task of blocked | slice: 0:4; let i = index" [index]="i" [task]="task" class="blocked" id="blocked_card_{{i}}"></app-cpo-task-card>
+                <mat-card *ngIf="blocked.length > 4" class="card-type more-cards-block">
+                    <span class="extra-cards-count">{{blocked.length}}+</span>
+                    <span class="title" id="title">View more to-do tasks</span>
+                </mat-card>
+        </div>
+
+    </div>
+    <div class="task-board task-board-sm">
+        <div class="task-board-content">
+            <div class="header-content" id="contentHeader">
+                <div class="task-select-form">
+                    <app-cpo-select id="taskSelectSmall" class="task-select-small" [data]="selectedTask" [options]="taskMetaData" (selectionChange)="swapTasks($event)"></app-cpo-select>
+                </div>
+            </div>
+            <div class="selected-task-list" id="selectedTaskList">
+                    <app-cpo-task-card *ngFor="let task of selectedTask.value.data | slice: 0:4; let i = index" [index]="i" [task]="task" class="selected-task-card" id="selectedTaskCard_{{i}}
+                    "></app-cpo-task-card>
+                    <div class="more-card-options">
+                        <mat-card *ngIf="selectedTask.value.data.length > 4" class="card-type more-cards-block" id="view_more_card">
+                            <span class="extra-cards-count">{{selectedTask.value.data.length}}+</span>
+                            <span class="title" id="title">View more {{selectedTask.value.label}} tasks</span>
+                        </mat-card>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+            <a class="text-see-more" href="">SEE MORE</a>
+        </div> -->
+</div>

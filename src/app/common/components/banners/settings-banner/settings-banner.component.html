@@ -1,0 +1,36 @@
+<div class="bg-banner">
+  <div class="navigation">
+      <span class="tab-menu-label">Settings:</span>
+      <mat-form-field id="secondary-menu-dropdown">
+          <span class="solution-hub" id="Solution-Hub">{{settingsMenuOption}} </span> 
+          <mat-icon class="dropdown-filled" svgIcon="dropdown"></mat-icon>
+              <mat-select class="solutions-menu " [(value)]="settingsMenuOption" (selectionChange) = "settingsMenuOptionChanged($event)">
+                  <mat-option value="0">Profile</mat-option>
+                  <mat-option value="1">Notification Preference</mat-option>
+              </mat-select>
+      </mat-form-field>
+      <mat-tab-group class="tab-menu-container" disableRipple="true" (selectedTabChange)="swapViews($event)">
+          <mat-tab label="Profile" id="profile"></mat-tab>
+          <mat-tab label=" Notification Preference" id="notifications"></mat-tab>
+      </mat-tab-group>
+   </div>
+  <div class="banner-body">
+      <div class="avatar-component">
+        <div class="avatar-banner">
+          <div class="user-avatar">
+            <img *ngIf="profile.image" class="image" src="{{profile.image}}" />
+            <div *ngIf="!profile.image" class="no-image">
+              {{profile.firstName.slice(0,1)}}{{profile.lastName.slice(0,1)}}
+            </div>
+          </div>
+          <div class="pnc-support">
+            <span class="pnc-support-name">{{profile.firstName}} {{profile.lastName}}</span>
+            <span class="pnc-support-title">{{profile.role}}</span>
+            <div class="pnc-edit-btn">
+                EDIT PHOTO
+            </div>
+          </div>
+        </div>
+      </div> 
+  </div>  
+</div>

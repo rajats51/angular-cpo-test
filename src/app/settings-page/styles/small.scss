@@ -1,0 +1,47 @@
+.page-content {
+    .form-container{
+        background-color: $color-white;
+        padding-left: 30px;
+        padding-right: 30px;
+        .form-title {
+            color: $color-blue;
+            font-size: 30px;
+            line-height: 38px;
+            font-family: "PNC Brand";
+            font-weight: 500;
+        }
+        .edit-profile-form {
+            .mat-form-field-label {
+                overflow: unset;
+            }
+        }
+        .mat-form-field-underline {
+            height: 1px !important;
+        }
+    }
+}
+
+.task-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    .task-board {
+        flex-direction: column;
+    }
+}
+.page-content {
+    padding-bottom: 157px;
+    .form-container {
+        width: 100%;
+        .mat-form-field {
+            margin-bottom: 10px;
+        }
+        .mat-form-field-appearance-legacy {
+            .mat-form-field-wrapper {
+                padding-bottom: 2rem;
+            }
+            .mat-form-field-infix {
+                padding: 0.8375em 0;
+            }
+        }
+    }
+}

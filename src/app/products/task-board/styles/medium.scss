@@ -1,0 +1,72 @@
+@import "global_styles";
+
+.task-board-lg {
+    display: none;
+}
+
+.task-board-sm {
+    .task-board-content {
+        justify-content: left;
+        .content-header {
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 50px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-header > * {
+            width: 100%;
+        }
+    }
+
+    mat-select {
+        width: 60%;
+        height: 100%;
+        .mat-select-value-text {
+            color: $color-black;
+        }
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline{
+        display: block !important;
+    }
+}
+.task-board-content {
+    width: 100%;
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        .task-select-form {
+            width: 50%;
+            padding-left: 16.5px;
+            padding-right: 16.5px;
+        }
+    }
+    .selected-task-list {
+        display: block;
+        .selected-task-card {
+            display: inline-block;
+            width: 50%;
+            padding-left: 16.5px;
+            padding-right: 16.5px;
+        }
+        .more-card-options {
+            display: inline-block;
+            width: 50%;
+            padding-left: 16.5px;
+            padding-right: 16.5px;
+        }
+    }
+}
+.mat-form-field {
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+.selected-task-list {
+    padding-left: 0;
+    padding-right: 0;
+  }

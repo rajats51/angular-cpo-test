@@ -1,0 +1,43 @@
+@import "global_styles";
+
+.task-board{
+    flex-direction: column;
+
+}
+
+.column{
+    width:100% !important;
+    border-bottom: solid 1px $color-gray-4;  
+    border-right:none;
+    margin-bottom:2rem; 
+}
+
+.task-board-lg {
+    display: none;
+}
+
+.task-board-content {
+    width: 100%;
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        .task-select-form {
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    .selected-task-list {
+        display: block;
+    }
+}
+
+.selected-task-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
