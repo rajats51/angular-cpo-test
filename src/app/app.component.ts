@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from '@angular/router';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}]
+  providers: [Location, { provide: LocationStrategy, useClass: PathLocationStrategy }]
 })
 export class AppComponent implements OnInit {
   title = 'cpo-web-ui';
