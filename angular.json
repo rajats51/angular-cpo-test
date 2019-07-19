@@ -31,9 +31,9 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "./src/assets/sass",
-                "./src/assets/fonts",
-                "./src/assets/fonts/styles/scss"
+                "src/assets/sass",
+                "src/assets/fonts",
+                "src/assets/fonts/styles/scss"
               ]
             },            
             "scripts": []
@@ -94,10 +94,10 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "./src/assets/sass",
-                "./src/assets/fonts",
-                "./src/assets/fonts/styles/scss",
-                "./src/assets/fonts/__MACOSX/styles/scss"
+                "src/assets/sass",
+                "src/assets/fonts",
+                "src/assets/fonts/styles/scss",
+                "src/assets/fonts/__MACOSX/styles/scss"
               ]
             }, 
             "scripts": [],

@@ -1,6 +1,8 @@
-@import "../style/banners.scss";
+@import "../../../../../assets/sass/global_styles";
 
-.avatar-component{
+@import "../style/banners";
+
+.avatar-component {
     /* margin-top:25px;
     margin-right:20px; */
     height: 170px;
